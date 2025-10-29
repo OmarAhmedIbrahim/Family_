@@ -1,0 +1,26 @@
+{
+   
+   "title" : "Welcome" ,
+   "appGoal" : "Unite your family through the blessed words of Allah " ,
+   "appDescription" : "Track your family's Quran reading journey together, assign daily readings, and celebrate milestones as one united family",
+   "begin" : "Begin now",
+   "join" : "Join thousands of families reading the Quran together",
+   "start" : "Start Your Family's Journey Today",
+
+
+
+
+
+
+
+
+
+   "welcome" : "Welcome To Your Family",
+   "journey" : "How do you want to start your journey?" ,
+   "create" : "Create a new family",
+   "invite" : "Start a new family group and invite members",
+   "admin" : "-  Become the family admin",
+   "goals": "-  Set reading goals for your family",
+   "manage" : "-  Manage family members",
+   "track" : "-  Track everyone's progress"
+}
