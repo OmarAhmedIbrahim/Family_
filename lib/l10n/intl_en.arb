@@ -22,5 +22,13 @@
    "admin" : "-  Become the family admin",
    "goals": "-  Set reading goals for your family",
    "manage" : "-  Manage family members",
-   "track" : "-  Track everyone's progress"
+   "track" : "-  Track everyone's progress",
+   "existing" : "Join Existing Family",
+   "connect" : "Connect with your family group",
+   "code": "-  Enter your family code",
+   "get" : "-  Get your daily reading assignment",
+   "progrss" : "-  Track your progress",
+   "together" : "-  Read together as a family",
+   "buttonCreate" : "Start with your Family",
+   "buttonJoin" : "Join Your Family"
 }

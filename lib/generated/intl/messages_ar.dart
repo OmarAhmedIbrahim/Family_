@@ -30,7 +30,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "جمع عائلتك حول كلمات الله المباركة ",
     ),
     "begin": MessageLookupByLibrary.simpleMessage("ابدا الآن"),
+    "buttonCreate": MessageLookupByLibrary.simpleMessage("ابدأ مع عائلتك"),
+    "buttonJoin": MessageLookupByLibrary.simpleMessage("انضم إلى عائلتك"),
+    "code": MessageLookupByLibrary.simpleMessage("-  أدخل الرمز "),
+    "connect": MessageLookupByLibrary.simpleMessage("تواصل مع عائلتك"),
     "create": MessageLookupByLibrary.simpleMessage("إنشاء عائلة جديدة"),
+    "existing": MessageLookupByLibrary.simpleMessage(
+      "انضم إلى عائلة موجودة بالفعل",
+    ),
+    "get": MessageLookupByLibrary.simpleMessage(
+      "-  احصل على مهمة القراءة اليومية الخاصة بك ",
+    ),
     "goals": MessageLookupByLibrary.simpleMessage(
       "-  حدد أهداف القراءة لعائلتك",
     ),
@@ -40,8 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "journey": MessageLookupByLibrary.simpleMessage("كيف تريد أن تبدأ رحلتك؟"),
     "manage": MessageLookupByLibrary.simpleMessage("-   قم بإضافة أفراد اسرتك"),
+    "progrss": MessageLookupByLibrary.simpleMessage("-  تتبع التقدم المحرز "),
     "start": MessageLookupByLibrary.simpleMessage("ابدأ رحلة عائلتك اليوم"),
     "title": MessageLookupByLibrary.simpleMessage("مرحبا"),
+    "together": MessageLookupByLibrary.simpleMessage("-  القراءة معًا كعائلة "),
     "track": MessageLookupByLibrary.simpleMessage("-  تتبع قراءة الجميع"),
     "welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك و بعائلتك"),
   };

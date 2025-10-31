@@ -183,6 +183,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Join Existing Family`
+  String get existing {
+    return Intl.message(
+      'Join Existing Family',
+      name: 'existing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connect with your family group`
+  String get connect {
+    return Intl.message(
+      'Connect with your family group',
+      name: 'connect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-  Enter your family code`
+  String get code {
+    return Intl.message(
+      '-  Enter your family code',
+      name: 'code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-  Get your daily reading assignment`
+  String get get {
+    return Intl.message(
+      '-  Get your daily reading assignment',
+      name: 'get',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-  Track your progress`
+  String get progrss {
+    return Intl.message(
+      '-  Track your progress',
+      name: 'progrss',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-  Read together as a family`
+  String get together {
+    return Intl.message(
+      '-  Read together as a family',
+      name: 'together',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start with your Family`
+  String get buttonCreate {
+    return Intl.message(
+      'Start with your Family',
+      name: 'buttonCreate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join Your Family`
+  String get buttonJoin {
+    return Intl.message(
+      'Join Your Family',
+      name: 'buttonJoin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

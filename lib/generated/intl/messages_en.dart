@@ -30,7 +30,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Unite your family through the blessed words of Allah ",
     ),
     "begin": MessageLookupByLibrary.simpleMessage("Begin now"),
+    "buttonCreate": MessageLookupByLibrary.simpleMessage(
+      "Start with your Family",
+    ),
+    "buttonJoin": MessageLookupByLibrary.simpleMessage("Join Your Family"),
+    "code": MessageLookupByLibrary.simpleMessage("-  Enter your family code"),
+    "connect": MessageLookupByLibrary.simpleMessage(
+      "Connect with your family group",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("Create a new family"),
+    "existing": MessageLookupByLibrary.simpleMessage("Join Existing Family"),
+    "get": MessageLookupByLibrary.simpleMessage(
+      "-  Get your daily reading assignment",
+    ),
     "goals": MessageLookupByLibrary.simpleMessage(
       "-  Set reading goals for your family",
     ),
@@ -44,10 +56,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "How do you want to start your journey?",
     ),
     "manage": MessageLookupByLibrary.simpleMessage("-  Manage family members"),
+    "progrss": MessageLookupByLibrary.simpleMessage("-  Track your progress"),
     "start": MessageLookupByLibrary.simpleMessage(
       "Start Your Family\'s Journey Today",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Welcome"),
+    "together": MessageLookupByLibrary.simpleMessage(
+      "-  Read together as a family",
+    ),
     "track": MessageLookupByLibrary.simpleMessage(
       "-  Track everyone\'s progress",
     ),
