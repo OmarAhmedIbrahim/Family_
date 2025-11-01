@@ -16,6 +16,14 @@ TextStyle titleLarge ({Color ?color , FontWeight? weight}){
   );
 }
 
+TextStyle appbarText ({Color ?color , FontWeight? weight}){
+  return TextStyle(
+    fontSize: 20,
+    color: color ??  Colors.white,
+    fontWeight: weight ?? FontWeight.bold,
+  );
+}
+
 
 TextStyle titleDescription ({Color ?color , FontWeight? weight}){
   return TextStyle(

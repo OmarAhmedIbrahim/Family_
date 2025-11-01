@@ -263,6 +263,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Join Your Family Now`
+  String get existingJoin {
+    return Intl.message(
+      'Join Your Family Now',
+      name: 'existingJoin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the family code to connect with your family group`
+  String get existingCode {
+    return Intl.message(
+      'Enter the family code to connect with your family group',
+      name: 'existingCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Family Code`
+  String get existingFamilyCode {
+    return Intl.message(
+      'Family Code',
+      name: 'existingFamilyCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ask your family admin for the access code`
+  String get existingAsk {
+    return Intl.message(
+      'Ask your family admin for the access code',
+      name: 'existingAsk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Family Code`
+  String get existingEnter {
+    return Intl.message(
+      'Enter Family Code',
+      name: 'existingEnter',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

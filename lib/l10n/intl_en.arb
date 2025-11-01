@@ -30,5 +30,19 @@
    "progrss" : "-  Track your progress",
    "together" : "-  Read together as a family",
    "buttonCreate" : "Start with your Family",
-   "buttonJoin" : "Join Your Family"
+   "buttonJoin" : "Join Your Family",
+
+
+
+
+
+
+
+
+
+   "existingJoin" : "Join Your Family Now",
+   "existingCode" : "Enter the family code to connect with your family group",
+   "existingFamilyCode" : "Family Code",
+   "existingAsk":  "Ask your family admin for the access code",
+   "existingEnter" : "Enter Family Code"
 }

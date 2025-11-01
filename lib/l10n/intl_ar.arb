@@ -28,5 +28,11 @@
    "progrss" : "-  تتبع التقدم المحرز ",
    "together" : "-  القراءة معًا كعائلة "   ,
    "buttonCreate" : "ابدأ مع عائلتك",
-   "buttonJoin" : "انضم إلى عائلتك"
+   "buttonJoin" : "انضم إلى عائلتك",
+
+    "existingJoin" : "انضم إلى عائلتك الآن",
+    "existingCode" : "أدخل رمز العائلة للاتصال بمجموعة عائلتك",
+    "existingFamilyCode" : "رمز العائلة",
+    "existingAsk" : "اطلب رمز الدخول من مسؤول العائلة",
+    "existingEnter" : "أدخل رمز العائلة"
 }

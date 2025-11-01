@@ -38,6 +38,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "existing": MessageLookupByLibrary.simpleMessage(
       "انضم إلى عائلة موجودة بالفعل",
     ),
+    "existingAsk": MessageLookupByLibrary.simpleMessage(
+      "اطلب رمز الدخول من مسؤول العائلة",
+    ),
+    "existingCode": MessageLookupByLibrary.simpleMessage(
+      "أدخل رمز العائلة للاتصال بمجموعة عائلتك",
+    ),
+    "existingEnter": MessageLookupByLibrary.simpleMessage("أدخل رمز العائلة"),
+    "existingFamilyCode": MessageLookupByLibrary.simpleMessage("رمز العائلة"),
+    "existingJoin": MessageLookupByLibrary.simpleMessage(
+      "انضم إلى عائلتك الآن",
+    ),
     "get": MessageLookupByLibrary.simpleMessage(
       "-  احصل على مهمة القراءة اليومية الخاصة بك ",
     ),

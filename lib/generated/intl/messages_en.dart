@@ -40,6 +40,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "create": MessageLookupByLibrary.simpleMessage("Create a new family"),
     "existing": MessageLookupByLibrary.simpleMessage("Join Existing Family"),
+    "existingAsk": MessageLookupByLibrary.simpleMessage(
+      "Ask your family admin for the access code",
+    ),
+    "existingCode": MessageLookupByLibrary.simpleMessage(
+      "Enter the family code to connect with your family group",
+    ),
+    "existingEnter": MessageLookupByLibrary.simpleMessage("Enter Family Code"),
+    "existingFamilyCode": MessageLookupByLibrary.simpleMessage("Family Code"),
+    "existingJoin": MessageLookupByLibrary.simpleMessage(
+      "Join Your Family Now",
+    ),
     "get": MessageLookupByLibrary.simpleMessage(
       "-  Get your daily reading assignment",
     ),

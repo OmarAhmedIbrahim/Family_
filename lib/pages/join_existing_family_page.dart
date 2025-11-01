@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quran_app/constants/colors.dart';
 import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/generated/l10n.dart';
+import 'package:quran_app/widgets/appbar_back.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
 
@@ -24,9 +24,7 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: appBackgroundColor,
-            leading: GestureDetector(child: Icon(Iconsax.arrow_left_2 , color: Colors.white,), onTap: () {
-              Navigator.pop(context);
-            },),
+            leading: AppbarBack(),
           ),
           body: SingleChildScrollView(
             child: Center(
@@ -42,13 +40,13 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
                   ),
                   midHeightSpace(),
                   Text(
-                    "Join Your Family Now",
+                    S.of(context).existingJoin,
                     style: titleLarge(),
                     textAlign: TextAlign.center,
                   ),
                   smallHeightSpace(),
                   Text(
-                    "Enter the family code to connect with your family group",
+                    S.of(context).existingCode,
                     style: titleDescription(),
                     textAlign: TextAlign.center,
                   ),
@@ -75,12 +73,12 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
                           ),
                           smallHeightSpace(),
                           Text(
-                            "Family Code",
+                            S.of(context).existingFamilyCode,
                             style: titleDescription(weight: FontWeight.bold),
                           ),
 
                           Text(
-                            "Ask your family admin for the access code",
+                            S.of(context).existingAsk,
                             style: smallText(
                               weight: FontWeight.w500,
                               color: lightBlue,
@@ -95,7 +93,7 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
                               onFieldSubmitted: (value) {},
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.all(avgPadding),
-                                hintText: "Enter the family code",
+                                hintText: S.of(context).existingEnter,
                                 hintStyle: smallText(),
                                 filled: true, // Don't forget this!
                                 fillColor: notSelectedColor,
