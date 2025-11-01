@@ -4,6 +4,7 @@ import 'package:quran_app/constants/colors.dart';
 import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/generated/l10n.dart';
+import 'package:quran_app/pages/join_existing_family_page.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
 
@@ -173,7 +174,9 @@ class _ChooseFamilyPageState extends State<ChooseFamilyPage> {
                           ),
                           smallHeightSpace(),
                           CustomButton(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> JoinExistingFamilyPage()));
+                            },
                             buttonColor: dividerColor,
                             text: S.of(context).buttonJoin,
                             width: screenWidth * 0.8,
