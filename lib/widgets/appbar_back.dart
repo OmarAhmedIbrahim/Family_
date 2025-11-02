@@ -11,8 +11,10 @@ class AppbarBack extends StatefulWidget {
 class _AppbarBackState extends State<AppbarBack> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(child: Icon(Iconsax.arrow_left_2 , color: Colors.white,), onTap: () {
-              Navigator.pop(context);
-            },);
+    return IconButton(
+      icon: const Icon(Iconsax.arrow_left_2, color: Colors.white),
+      tooltip: 'Back',
+      onPressed: () => Navigator.maybePop(context),
+    );
   }
 }

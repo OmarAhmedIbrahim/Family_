@@ -7,6 +7,7 @@ import 'package:quran_app/generated/l10n.dart';
 import 'package:quran_app/widgets/appbar_back.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
+import 'package:quran_app/widgets/custom_text_field.dart';
 
 class JoinExistingFamilyPage extends StatefulWidget {
   const JoinExistingFamilyPage({super.key});
@@ -24,7 +25,30 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: appBackgroundColor,
-            leading: AppbarBack(),
+            automaticallyImplyLeading: false,
+            // fix children order to physical left using an LTR Row while keeping the title's
+            // internal text direction localized so Arabic title text still renders RTL.
+            title: Directionality(
+              textDirection: TextDirection.ltr,
+              child: Row(
+                children: [
+                  AppbarBack(),
+                  Expanded(
+                    child: Center(
+                      child: Directionality(
+                        textDirection: Directionality.of(context),
+                        child: Text(
+                          S.of(context).existingJoin,
+                          style: titleLarge(),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 48),
+                ],
+              ),
+            ),
           ),
           body: SingleChildScrollView(
             child: Center(
@@ -88,32 +112,11 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
                           midHeightSpace(),
                           SizedBox(
                             width: screenWidth * .8,
-                            child: TextFormField(
+                            child: CustomTextField(
                               textInputAction: TextInputAction.done,
                               onFieldSubmitted: (value) {},
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(avgPadding),
-                                hintText: S.of(context).existingEnter,
-                                hintStyle: smallText(),
-                                filled: true, // Don't forget this!
-                                fillColor: notSelectedColor,
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: lightBlue,
-                                    width: 0,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color:lightBlue, width: 0),
-                                  
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red),
-                                ),
-                              ),
+                              hintText: S.of(context).existingEnter,
+                              borderWidth: 0,
                             ),
                           ),
                           smallHeightSpace(),
