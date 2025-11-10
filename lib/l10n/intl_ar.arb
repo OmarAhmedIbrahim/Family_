@@ -34,5 +34,23 @@
     "existingCode" : "أدخل رمز العائلة للاتصال بمجموعة عائلتك",
     "existingFamilyCode" : "رمز العائلة",
     "existingAsk" : "اطلب رمز الدخول من مسؤول العائلة",
-    "existingEnter" : "أدخل رمز العائلة"
+    "existingEnter" : "أدخل رمز العائلة",
+
+    "startNewFamily_appBarTitle": "إنشاء عائلتك",
+    "startNewFamily_familySetup": "إعداد العائلة",
+    "startNewFamily_description": "قم بتكوين رحلة قراءة القرآن لعائلتك",
+    "startNewFamily_familyNameLabel": "اسم العائلة",
+    "startNewFamily_enterFamilyNameHint": "أدخل اسم عائلتك",
+    "startNewFamily_completeQuranReadingLabel": "إكمال قراءة القرآن (مرات في الشهر)",
+    "startNewFamily_readingTimesExample": "مثال: 1، 2، 3",
+    "startNewFamily_goalChangeNote": "يمكن تغيير هذا الهدف في أي وقت من الإعدادات",
+    "startNewFamily_createButton": "إنشاء العائلة"
+    ,
+    "setYourName_welcome": "مرحبًا بك في عائلة القرآن",
+    "setYourName_getToKnow": "  دعنا نتعرف عليك اكثر",
+    "setYourName_enterFullName": "أدخل اسمك الكامل",
+    "setYourName_firstNameHint": "أدخل اسمك الأول",
+    "setYourName_lastNameHint": "أدخل اسم العائلة",
+    "setYourName_emptyNameError": "الرجاء إدخال الاسم الأول واسم العائلة",
+    "setYourName_continue": "متابعة"
 }

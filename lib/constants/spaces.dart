@@ -25,3 +25,26 @@ SizedBox midHeightSpace (){
     height: 20,
   );
 }
+
+
+SizedBox largeWidthSpace (){
+  return SizedBox(
+    width: 50,
+  );
+}
+
+
+SizedBox smallWidthSpace (){
+  return SizedBox(
+    width: 10,
+  );
+}
+
+
+
+
+SizedBox midWidthSpace (){
+  return SizedBox(
+    width: 20,
+  );
+}

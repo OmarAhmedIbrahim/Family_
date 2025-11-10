@@ -68,8 +68,55 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manage": MessageLookupByLibrary.simpleMessage("-  Manage family members"),
     "progrss": MessageLookupByLibrary.simpleMessage("-  Track your progress"),
+    "setYourName_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+    "setYourName_emptyNameError": MessageLookupByLibrary.simpleMessage(
+      "Please enter both first and last name",
+    ),
+    "setYourName_enterFullName": MessageLookupByLibrary.simpleMessage(
+      "Enter your full name",
+    ),
+    "setYourName_firstNameHint": MessageLookupByLibrary.simpleMessage(
+      "Enter your first name",
+    ),
+    "setYourName_getToKnow": MessageLookupByLibrary.simpleMessage(
+      "Let\'s get to know you",
+    ),
+    "setYourName_lastNameHint": MessageLookupByLibrary.simpleMessage(
+      "Enter your last name",
+    ),
+    "setYourName_welcome": MessageLookupByLibrary.simpleMessage(
+      "Welcome to Family Quran",
+    ),
     "start": MessageLookupByLibrary.simpleMessage(
       "Start Your Family\'s Journey Today",
+    ),
+    "startNewFamily_appBarTitle": MessageLookupByLibrary.simpleMessage(
+      "Create Your Family",
+    ),
+    "startNewFamily_completeQuranReadingLabel":
+        MessageLookupByLibrary.simpleMessage(
+          "Complete Quran Reading (times per month)",
+        ),
+    "startNewFamily_createButton": MessageLookupByLibrary.simpleMessage(
+      "Create Family",
+    ),
+    "startNewFamily_description": MessageLookupByLibrary.simpleMessage(
+      "Configure your family\'s Quran reading journey",
+    ),
+    "startNewFamily_enterFamilyNameHint": MessageLookupByLibrary.simpleMessage(
+      "Enter Your Family Name",
+    ),
+    "startNewFamily_familyNameLabel": MessageLookupByLibrary.simpleMessage(
+      "Family name",
+    ),
+    "startNewFamily_familySetup": MessageLookupByLibrary.simpleMessage(
+      "Family Setup",
+    ),
+    "startNewFamily_goalChangeNote": MessageLookupByLibrary.simpleMessage(
+      "This goal can be changed anytime in settings",
+    ),
+    "startNewFamily_readingTimesExample": MessageLookupByLibrary.simpleMessage(
+      "e.g., 1, 2, 3",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Welcome"),
     "together": MessageLookupByLibrary.simpleMessage(

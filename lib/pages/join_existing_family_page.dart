@@ -33,19 +33,7 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
               child: Row(
                 children: [
                   AppbarBack(),
-                  Expanded(
-                    child: Center(
-                      child: Directionality(
-                        textDirection: Directionality.of(context),
-                        child: Text(
-                          S.of(context).existingJoin,
-                          style: titleLarge(),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 48),
+                 
                 ],
               ),
             ),
@@ -116,7 +104,7 @@ class _JoinExistingFamilyPageState extends State<JoinExistingFamilyPage> {
                               textInputAction: TextInputAction.done,
                               onFieldSubmitted: (value) {},
                               hintText: S.of(context).existingEnter,
-                              borderWidth: 0,
+                              borderWidth: 1,
                             ),
                           ),
                           smallHeightSpace(),

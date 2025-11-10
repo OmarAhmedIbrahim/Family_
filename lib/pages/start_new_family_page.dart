@@ -4,10 +4,12 @@ import 'package:quran_app/constants/colors.dart';
 import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/generated/l10n.dart';
+import 'package:quran_app/pages/family_page.dart';
 import 'package:quran_app/widgets/appbar_back.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
 import 'package:quran_app/widgets/custom_text_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class StartNewFamilyPage extends StatefulWidget {
   const StartNewFamilyPage({super.key});
@@ -27,8 +29,6 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
           appBar: AppBar(
             backgroundColor: appBackgroundColor,
             automaticallyImplyLeading: false,
-            // fix children order to physical left using an LTR Row while keeping the title's
-            // internal text direction localized so Arabic title text still renders RTL.
             title: Directionality(
               textDirection: TextDirection.ltr,
               child: Row(
@@ -39,7 +39,7 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                       child: Directionality(
                         textDirection: Directionality.of(context),
                         child: Text(
-                          "Create Your Family",
+                          S.of(context).startNewFamily_appBarTitle,
                           style: appbarText(),
                           textAlign: TextAlign.center,
                         ),
@@ -81,14 +81,14 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                           smallHeightSpace(),
                           Center(
                             child: Text(
-                              "Family Setup",
+                              S.of(context).startNewFamily_familySetup,
                               style: titleDescription(weight: FontWeight.bold),
                               textAlign: TextAlign.center,
                             ),
                           ),
                           Center(
                             child: Text(
-                              "Configure your family's Quran reading journey",
+                              S.of(context).startNewFamily_description,
                               style: smallText(
                                 weight: FontWeight.w500,
                                 color: lightBlue,
@@ -101,7 +101,7 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                             padding: const EdgeInsets.symmetric(
                               vertical: smallPadding,
                             ),
-                            child: Text("Family name", style: smallText()),
+                            child: Text(S.of(context).startNewFamily_familyNameLabel, style: smallText()),
                           ),
 
                           SizedBox(
@@ -109,7 +109,7 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                             child: CustomTextField(
                               textInputAction: TextInputAction.done,
                               onFieldSubmitted: (value) {},
-                              hintText: "Enter Your Family Name",
+                              hintText: S.of(context).startNewFamily_enterFamilyNameHint,
                             ),
                           ),
                           midHeightSpace(),
@@ -118,7 +118,7 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                               vertical: smallPadding,
                             ),
                             child: Text(
-                              "Complete Quran Reading (times per month)",
+                              S.of(context).startNewFamily_completeQuranReadingLabel,
                               style: smallText(),
                             ),
                           ),
@@ -127,12 +127,12 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                             child: CustomTextField(
                               textInputAction: TextInputAction.done,
                               onFieldSubmitted: (value) {},
-                              hintText: "e.g., 1, 2, 3",
+                              hintText: S.of(context).startNewFamily_readingTimesExample,
                             ),
                           ),
                           smallHeightSpace(),
                           Text(
-                            "This goal can be changed anytime in settings",
+                            S.of(context).startNewFamily_goalChangeNote,
                             style: smallText(
                               color: Colors.grey,
                               weight: FontWeight.w300,
@@ -141,9 +141,20 @@ class _StartNewFamilyPageState extends State<StartNewFamilyPage> {
                           midHeightSpace(),
                           CustomButton(
                             width: screenWidth * 0.8,
-                            text: "Create Family",
-                            onTap: () {
-                              // Handle create family action
+                            text: S.of(context).startNewFamily_createButton,
+                            onTap: () async {
+                              final navigator = Navigator.of(context);
+                              final prefs = await SharedPreferences.getInstance();
+                              // mark that family setup is completed so next app start can open FamilyPage directly
+                              await prefs.setBool('familySetupCompleted', true);
+                              if (!mounted) return;
+                              navigator.pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return const FamilyPage();
+                                  },
+                                ),
+                              );
                             },
                             buttonColor: buttonColor,
                           ),

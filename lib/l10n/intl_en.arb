@@ -44,5 +44,23 @@
    "existingCode" : "Enter the family code to connect with your family group",
    "existingFamilyCode" : "Family Code",
    "existingAsk":  "Ask your family admin for the access code",
-   "existingEnter" : "Enter Family Code"
+   "existingEnter" : "Enter Family Code",
+
+   "startNewFamily_appBarTitle": "Create Your Family",
+   "startNewFamily_familySetup": "Family Setup",
+   "startNewFamily_description": "Configure your family's Quran reading journey",
+   "startNewFamily_familyNameLabel": "Family name",
+   "startNewFamily_enterFamilyNameHint": "Enter Your Family Name",
+   "startNewFamily_completeQuranReadingLabel": "Complete Quran Reading (times per month)",
+   "startNewFamily_readingTimesExample": "e.g., 1, 2, 3",
+   "startNewFamily_goalChangeNote": "This goal can be changed anytime in settings",
+   "startNewFamily_createButton": "Create Family"
+   ,
+   "setYourName_welcome": "Welcome to Family Quran",
+   "setYourName_getToKnow": "Let's get to know you",
+       "setYourName_enterFullName": "Enter your full name",
+       "setYourName_firstNameHint": "Enter your first name",
+       "setYourName_lastNameHint": "Enter your last name",
+       "setYourName_emptyNameError": "Please enter both first and last name",
+   "setYourName_continue": "Continue"
 }

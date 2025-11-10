@@ -41,3 +41,10 @@ TextStyle smallText ({Color ?color , FontWeight? weight}){
   );
 }
 
+TextStyle avgText ({Color ?color , FontWeight? weight}){
+  return TextStyle(
+    fontSize: 20,
+    color: color ??  Colors.white,
+    fontWeight: weight ?? FontWeight.bold,
+  );
+}

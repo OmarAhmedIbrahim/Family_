@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 import 'package:quran_app/constants/colors.dart';
 import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/pages/welcome_page.dart';
+import 'package:quran_app/pages/family_page.dart';
 import 'package:quran_app/software/providers/language_provider.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,6 +19,7 @@ class ChooseLanguagePage extends StatefulWidget {
 class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
   bool _isLoading = true;
   String? _storedLanguage;
+  bool _familyCreated = false;
   bool arIsSelected = false;
   bool enIsSelected = false;
 
@@ -30,8 +31,10 @@ class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
 
   Future<void> _checkStoredLanguage() async {
     final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
     setState(() {
       _storedLanguage = prefs.getString('language');
+      _familyCreated = prefs.getBool('familySetupCompleted') ?? false;
       _isLoading = false;
     });
   }
@@ -42,9 +45,12 @@ class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
-    // If we have a stored language, then go to WelcomePage
+    // If we have a stored language, then go to WelcomePage or FamilyPage if setup already completed
     if (_storedLanguage != null &&
         (_storedLanguage == 'ar' || _storedLanguage == 'en')) {
+      if (_familyCreated) {
+        return const FamilyPage();
+      }
       return WelcomePage();
     }
 
@@ -106,14 +112,17 @@ class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
                 
                             GestureDetector(
                               onTap: () async {
-                                final prefs = await SharedPreferences.getInstance();
-                                await prefs.setString('language', 'en');
-                                setState(() {
-                                  enIsSelected = true;
-                                  arIsSelected = false;
-                                });
-                                context.read<LanguageProvider>().changeLang('en');
-                              },
+                                  final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+                                  final prefs = await SharedPreferences.getInstance();
+                                  await prefs.setString('language', 'en');
+                                  if (!mounted) return;
+                                  setState(() {
+                                    enIsSelected = true;
+                                    arIsSelected = false;
+                                  });
+                                  // update provider
+                                  languageProvider.changeLang('en');
+                                },
                               child: Container(
                                 width: screenWidth*.7,
                                 height: 50,
@@ -139,13 +148,15 @@ class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
                 
                             GestureDetector(
                               onTap: () async {
+                                final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
                                 final prefs = await SharedPreferences.getInstance();
                                 await prefs.setString('language', 'ar');
+                                if (!mounted) return;
                                 setState(() {
                                   arIsSelected = true;
                                   enIsSelected = false;
                                 });
-                                context.read<LanguageProvider>().changeLang('ar');
+                                languageProvider.changeLang('ar');
                               },
                               child: Container(
                                 width: screenWidth*.7,
@@ -176,19 +187,21 @@ class _ChooseLanguagePageState extends State<ChooseLanguagePage> {
                             midHeightSpace(),
                             CustomButton(
                               onTap: () async {
+                                final navigator = Navigator.of(context);
+                                final messenger = ScaffoldMessenger.of(context);
                                 final prefs = await SharedPreferences.getInstance();
                                 String? lang = prefs.getString('language');
-                                print(lang);
+                                if (!mounted) return;
                                 if (lang != null) {
-                                  Navigator.of(context).pushReplacement(
+                                  navigator.pushReplacement(
                                     MaterialPageRoute(
                                       builder: (context) => WelcomePage(),
                                     ),
                                   );
                                 } else {
                                   // Show error that no language selected
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                  messenger.showSnackBar(
+                                    const SnackBar(
                                       content: Text('Please select a language'),
                                     ),
                                   );

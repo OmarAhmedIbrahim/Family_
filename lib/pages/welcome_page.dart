@@ -4,12 +4,13 @@ import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/generated/l10n.dart';
 import 'package:quran_app/pages/choose_family_page.dart';
+import 'package:quran_app/pages/set_your_name_page.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WelcomePage extends StatefulWidget {
-  WelcomePage({super.key});
+  const WelcomePage({super.key});
 
   @override
   State<WelcomePage> createState() => _WelcomePageState();
@@ -20,13 +21,14 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
-    displayed();
     super.initState();
+    // start loading display flag
+    displayed();
   }
 
   Future<void> displayed() async {
     final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
     setState(() {
       isDisplayedOnce = prefs.getBool("welcomeDisplayed");
     });
@@ -103,13 +105,13 @@ class _WelcomePageState extends State<WelcomePage> {
                               midHeightSpace(),
                               CustomButton(
                                 onTap: () async {
-                                  final prefs =
-                                      await SharedPreferences.getInstance();
-                                  prefs.setBool("welcomeDisplayed", true);
-                                  Navigator.pushReplacement(
-                                    context,
+                                  final navigator = Navigator.of(context);
+                                  final prefs = await SharedPreferences.getInstance();
+                                  await prefs.setBool("welcomeDisplayed", true);
+                                  if (!mounted) return;
+                                  navigator.pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => ChooseFamilyPage(),
+                                      builder: (context) => SetYourNamePage(),
                                     ),
                                   );
                                 },
@@ -131,7 +133,7 @@ class _WelcomePageState extends State<WelcomePage> {
         },
       );
     } else {
-      return ChooseFamilyPage();
+      return SetYourNamePage();
     }
   }
 }

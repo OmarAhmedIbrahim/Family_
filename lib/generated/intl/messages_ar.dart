@@ -62,7 +62,54 @@ class MessageLookup extends MessageLookupByLibrary {
     "journey": MessageLookupByLibrary.simpleMessage("كيف تريد أن تبدأ رحلتك؟"),
     "manage": MessageLookupByLibrary.simpleMessage("-   قم بإضافة أفراد اسرتك"),
     "progrss": MessageLookupByLibrary.simpleMessage("-  تتبع التقدم المحرز "),
+    "setYourName_continue": MessageLookupByLibrary.simpleMessage("متابعة"),
+    "setYourName_emptyNameError": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال الاسم الأول واسم العائلة",
+    ),
+    "setYourName_enterFullName": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسمك الكامل",
+    ),
+    "setYourName_firstNameHint": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسمك الأول",
+    ),
+    "setYourName_getToKnow": MessageLookupByLibrary.simpleMessage(
+      "  دعنا نتعرف عليك اكثر",
+    ),
+    "setYourName_lastNameHint": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسم العائلة",
+    ),
+    "setYourName_welcome": MessageLookupByLibrary.simpleMessage(
+      "مرحبًا بك في عائلة القرآن",
+    ),
     "start": MessageLookupByLibrary.simpleMessage("ابدأ رحلة عائلتك اليوم"),
+    "startNewFamily_appBarTitle": MessageLookupByLibrary.simpleMessage(
+      "إنشاء عائلتك",
+    ),
+    "startNewFamily_completeQuranReadingLabel":
+        MessageLookupByLibrary.simpleMessage(
+          "إكمال قراءة القرآن (مرات في الشهر)",
+        ),
+    "startNewFamily_createButton": MessageLookupByLibrary.simpleMessage(
+      "إنشاء العائلة",
+    ),
+    "startNewFamily_description": MessageLookupByLibrary.simpleMessage(
+      "قم بتكوين رحلة قراءة القرآن لعائلتك",
+    ),
+    "startNewFamily_enterFamilyNameHint": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسم عائلتك",
+    ),
+    "startNewFamily_familyNameLabel": MessageLookupByLibrary.simpleMessage(
+      "اسم العائلة",
+    ),
+    "startNewFamily_familySetup": MessageLookupByLibrary.simpleMessage(
+      "إعداد العائلة",
+    ),
+    "startNewFamily_goalChangeNote": MessageLookupByLibrary.simpleMessage(
+      "يمكن تغيير هذا الهدف في أي وقت من الإعدادات",
+    ),
+    "startNewFamily_readingTimesExample": MessageLookupByLibrary.simpleMessage(
+      "مثال: 1، 2، 3",
+    ),
     "title": MessageLookupByLibrary.simpleMessage("مرحبا"),
     "together": MessageLookupByLibrary.simpleMessage("-  القراءة معًا كعائلة "),
     "track": MessageLookupByLibrary.simpleMessage("-  تتبع قراءة الجميع"),

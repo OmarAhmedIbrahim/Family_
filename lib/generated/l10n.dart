@@ -313,6 +313,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Create Your Family`
+  String get startNewFamily_appBarTitle {
+    return Intl.message(
+      'Create Your Family',
+      name: 'startNewFamily_appBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Family Setup`
+  String get startNewFamily_familySetup {
+    return Intl.message(
+      'Family Setup',
+      name: 'startNewFamily_familySetup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Configure your family's Quran reading journey`
+  String get startNewFamily_description {
+    return Intl.message(
+      'Configure your family\'s Quran reading journey',
+      name: 'startNewFamily_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Family name`
+  String get startNewFamily_familyNameLabel {
+    return Intl.message(
+      'Family name',
+      name: 'startNewFamily_familyNameLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Family Name`
+  String get startNewFamily_enterFamilyNameHint {
+    return Intl.message(
+      'Enter Your Family Name',
+      name: 'startNewFamily_enterFamilyNameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete Quran Reading (times per month)`
+  String get startNewFamily_completeQuranReadingLabel {
+    return Intl.message(
+      'Complete Quran Reading (times per month)',
+      name: 'startNewFamily_completeQuranReadingLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g., 1, 2, 3`
+  String get startNewFamily_readingTimesExample {
+    return Intl.message(
+      'e.g., 1, 2, 3',
+      name: 'startNewFamily_readingTimesExample',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This goal can be changed anytime in settings`
+  String get startNewFamily_goalChangeNote {
+    return Intl.message(
+      'This goal can be changed anytime in settings',
+      name: 'startNewFamily_goalChangeNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Family`
+  String get startNewFamily_createButton {
+    return Intl.message(
+      'Create Family',
+      name: 'startNewFamily_createButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to Family Quran`
+  String get setYourName_welcome {
+    return Intl.message(
+      'Welcome to Family Quran',
+      name: 'setYourName_welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's get to know you`
+  String get setYourName_getToKnow {
+    return Intl.message(
+      'Let\'s get to know you',
+      name: 'setYourName_getToKnow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your full name`
+  String get setYourName_enterFullName {
+    return Intl.message(
+      'Enter your full name',
+      name: 'setYourName_enterFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your first name`
+  String get setYourName_firstNameHint {
+    return Intl.message(
+      'Enter your first name',
+      name: 'setYourName_firstNameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your last name`
+  String get setYourName_lastNameHint {
+    return Intl.message(
+      'Enter your last name',
+      name: 'setYourName_lastNameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter both first and last name`
+  String get setYourName_emptyNameError {
+    return Intl.message(
+      'Please enter both first and last name',
+      name: 'setYourName_emptyNameError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get setYourName_continue {
+    return Intl.message(
+      'Continue',
+      name: 'setYourName_continue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
