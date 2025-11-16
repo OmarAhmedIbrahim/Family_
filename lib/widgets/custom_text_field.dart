@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
   final double borderWidth;
   final Color? fillColor;
   final TextStyle? hintStyle;
+  final TextStyle? textStyle;
 
   const CustomTextField({
     super.key,
@@ -23,11 +24,13 @@ class CustomTextField extends StatelessWidget {
     this.borderWidth = 1.0,
     this.fillColor,
     this.hintStyle,
+    this.textStyle,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: textStyle ?? smallText(color: Colors.white),
       controller: controller,
       textInputAction: textInputAction,
       onFieldSubmitted: onFieldSubmitted,

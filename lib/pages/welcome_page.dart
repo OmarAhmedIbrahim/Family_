@@ -3,7 +3,6 @@ import 'package:quran_app/constants/colors.dart';
 import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/generated/l10n.dart';
-import 'package:quran_app/pages/choose_family_page.dart';
 import 'package:quran_app/pages/set_your_name_page.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';

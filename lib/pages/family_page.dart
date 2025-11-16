@@ -5,6 +5,7 @@ import 'package:quran_app/constants/spaces.dart';
 import 'package:quran_app/constants/textstyles.dart';
 import 'package:quran_app/widgets/custom_button.dart';
 import 'package:quran_app/widgets/custom_icon.dart';
+import 'package:quran_app/widgets/user_assigned_pages.dart';
 
 class FamilyPage extends StatefulWidget {
   const FamilyPage({super.key});
@@ -191,7 +192,19 @@ class _FamilyPageState extends State<FamilyPage> {
                               ),
                              
                             ),
+                            smallHeightSpace(),
                              Text("Today's progress for all members" , style: smallText(weight: FontWeight.w300),),
+                             midHeightSpace(),
+                             Center(
+                               child: UserAssignedPages(
+                                 title: "John Doe",
+                                 subtitle: "Pages 7 - 10",
+                                 buttonText: "Mark as done",
+                                 width: screenWidth * 0.8,
+                                 onButtonTap: () {},
+                                 icon: Iconsax.book_saved,
+                               ),
+                             ),
                           ],
                         ),
                       ),
